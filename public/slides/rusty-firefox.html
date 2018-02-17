@@ -1,188 +1,278 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
 
-		<title>Rusty Firefox</title>
+  <title>Rusty Firefox</title>
 
-		<meta name="description" content="A presentation about Firefox Quantum and Rust">
-		<meta name="author" content="Attila Gal">
+  <meta name="description" content="A presentation about Firefox Quantum and Rust">
+  <meta name="author" content="Attila Gal">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/white.css" id="theme">
-    <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/white.css" id="theme">
+  <link rel="stylesheet" href="custom.css">
 
-		<!--[if lt IE 9]>
+  <!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-	</head>
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
+  <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h3>Rusty Firefox Quantum</h3>
-          <img width="300" height="300" data-src="img/rff-0-0.png" alt="firefox">
-					<p>
-            <small>Presentation by Attila Gal</small>
-            <aside class="notes">
-              Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-            </aside>
-					</p>
-        </section>
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section>
+        <h3>Rusty Firefox Quantum</h3>
+        <img width="300" height="300" data-src="img/rff-0-0.png" alt="firefox">
+        <p>
+          <small>Presentation by Attila Gal</small>
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes
+            window (hit 's' on your keyboard).
+          </aside>
+        </p>
+      </section>
 
-        <section>
-          <img data-src="img/rff-0-1.jpg" />
-        </section>
+      <section>
+        <img data-src="img/rff-0-1.jpg" />
+      </section>
 
-        <section>
-          <h3>2008</h3>
-          <img data-src="img/old-chrome-logo.png" />
-        </section>
+      <section>
+        <h2>Table of Contents</h2>
+        <ol id="fragments">
+          <li class="fragment">Browser history</li>
+          <li class="fragment">Firefox Quantum</li>
+          <li class="fragment">Rust</li>
+        </ol>
+      </section>
 
-        <section>
-          <img data-src="img/rff-0-2.png" />
-        </section>
+      <section>
+        <h3>World's first webpage</h3>
+        <img data-src="img/rff-1-1.png" height="300" />
+        <div class="fragments">
+          <i class="fragment">
+            <a target="_blank" href="http://info.cern.ch/hypertext/WWW/TheProject.html">(still online btw)</a>
+          </i>
+        </div>
+      </section>
 
-        <section>
-          <img data-src="img/rff-0-3.png" />
-        </section>
+      <section>
+        <img data-src="img/web-timeline.png" />
+      </section>
 
-        <section>
-          <img data-src="img/rff-0-4.png" />
-        </section>
+      <section>
+        <h3>2008</h3>
+        <img data-src="img/old-chrome-logo.png" />
+      </section>
 
-        <section>
-          <img data-src="img/rff-0-5.png" />
-        </section>
-        
-        <section>
-          <h2>Table of Contents</h2>
-          <ol id="fragments">
-            <li class="fragment">Browser history</li>
-            <li class="fragment">Firefox Quantum</li>
-            <li class="fragment">Rust</li>
-          </ol>
-        </section>
+      <section>
+        <img data-src="img/rff-0-2.png" />
+      </section>
 
-        <section>
-          <h3>World's first webpage</h3>
-          <img data-src="img/rff-1-1.png" height="300" />
-          <div class="fragments">
-              <i class="fragment"><a href="http://info.cern.ch/hypertext/WWW/TheProject.html">(still online btw)</a></i>
-          </div>
-          </section>
+      <section>
+        <img data-src="img/rff-0-4.png" />
+      </section>
 
-        <section>
-					<h3>Let's look at the Renderer</h3>
-          <img width="500" height="317" data-src="img/rff-2-1.png" alt="servo">
-				</section>
+      <section>
+        <img data-src="img/pixel-comparison.png" height="600" />
+      </section>
 
-        <section>
-					<h3>What does it do?</h3>
-          <img data-src="img/rff-2-2.png" />
-        </section>
-        
-        <section>
-          <img data-src="img/rff-2-3.png" />
-        </section>
-        
-        <section>
-          <img data-src="img/rff-2-4.png" />
-        </section>
-        
-        <section>
-          <img data-src="img/rff-2-5.png" />
-				</section>
+      <section>
+        <img data-src="img/vr.png" />
+      </section>
 
-        <section>
-          <img data-src="img/rff-2-6.png" />
-				</section>
+      <section>
+        <img data-src="img/rff-0-3.png" />
+      </section>
 
-        <section>
-          <img data-src="img/rff-2-7.png" />
-				</section>
+      <section>
+        <img data-src="img/rff-0-5.png" />
+      </section>
 
-        <section>
-          <img data-src="img/rff-2-8.png" />
-				</section>
+      <section>
+        <img data-src="img/midflight.png" />
+      </section>
 
-        <section>
-          <img data-src="img/rff-2-9.png" height="600"/>
-				</section>
+      <section>
+        <h3>Let's look at the Renderer</h3>
+        <img width="500" height="317" data-src="img/rff-2-1.png" alt="servo">
+      </section>
 
-        <section>
-          <img data-src="img/rff-2-10.png" height="600"/>
-				</section>
+      <section>
+        <h3>What does it do?</h3>
+        <img data-src="img/rff-2-2.png" />
+      </section>
 
-        <section>
-          <img data-src="img/rff-2-11.png" />
-				</section>
+      <section>
+        <img data-src="img/rff-2-3.png" />
+      </section>
 
-        <section>
-          <img data-src="img/rff-2-12.png" />
-				</section>
+      <section>
+        <img data-src="img/rff-2-4.png" />
+      </section>
 
-        <section>
-          <img data-src="img/rff-2-13.png" />
-				</section>
+      <section>
+        <img data-src="img/rff-2-5.png" />
+      </section>
 
-        <section>
-          <h2>Conclusion</h2>
-          <ul id="fragments">
-            <li class="fragment">Web gets more and more complex</li>
-            <li class="fragment">
-              Browsers optimize
-              <ul>
-                <li class="fragment">Coarse-grained parrallelism</li>
-                <li class="fragment">Fine-grained parrallelism</li>
-                <li class="fragment">Web Assembly</li>
-              </ul>
-            </li>
-            <li class="fragment">Languages like Rust <span class="fragment">or Go, Elixir, Elm...</span></li>
-          </ul>
-        </section>
+      <section>
+        <img data-src="img/rff-2-6.png" />
+      </section>
 
-			</div>
+      <section>
+        <img data-src="img/rff-2-7.png" />
+      </section>
 
-		</div>
+      <section>
+        <img data-src="img/rff-2-8.png" />
+      </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+      <section>
+        <img data-src="img/rff-2-9.png" height="600" />
+      </section>
 
-		<script>
+      <section>
+        <img data-src="img/rff-2-10.png" height="600" />
+      </section>
 
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+      <section>
+        <img data-src="img/rff-2-11.png" />
+      </section>
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+      <section>
+        <img data-src="img/rff-2-12.png" />
+      </section>
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/search/search.js', async: true },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
+      <section>
+        <img data-src="img/this-tall.png" height="600" />
+      </section>
 
-		</script>
+      <section>
+        <img data-src="img/rff-2-13.png" />
+      </section>
 
-	</body>
+      <section>
+        <h2>What is Rust?</h2>
+        <ul class="fragments">
+          <li class="fragment">started in 2006 as a side project</li>
+          <li class="fragment">MIT license</li>
+          <li class="fragment">sponsored by Mozilla since 2009</li>
+          <li class="fragment">"most loved programming language" (Stack Overflow 2016 & 2017)</li>
+        </ul>
+      </section>
+
+      <section class="fragments">
+        <h2>System's programming language</h2>
+        <ul class="fragment">
+          <li>fine grained control over allocations</li>
+          <li>no required garbage-collector</li>
+          <li>minimal-runtime</li>
+          <li>"close to the metal"</li>
+        </ul>
+      </section>
+
+      <section class="fragments">
+        <h2>Prevents almost all crashes</h2>
+        <ul class="fragment">
+          <li>safe by default</li>
+          <li>sophosticated type system and analysis</li>
+          <li>no segfaults</li>
+          <li>no null pointers</li>
+          <li>no dangling pointers</li>
+        </ul>
+        <aside class="notes">
+          Segfaults are caused by a program trying to read or write an illegal memory location.
+        </aside>
+      </section>
+
+      <section class="fragments">
+        <h2>Eliminates data races</h2>
+        <ul class="fragment">
+          <li>ownership guarantees</li>
+          <li>borrowing prevents dangling pointers</li>
+          <li>strong, safe abstractions</li>
+        </ul>
+        <aside class="notes">
+          Ownership: variables are moved to new locations, preventing the previous location form using it. There is only ever ONE owner
+          of data!
+        </aside>
+      </section>
+
+      <section>
+        <i>
+          <a target="_blank" href="https://play.rust-lang.org/?version=stable&mode=debug">demo</a>
+        </i>
+      </section>
+
+      <section>
+        <h2>Conclusion</h2>
+        <ul id="fragments">
+          <li class="fragment">Web gets more and more complex</li>
+          <li class="fragment">
+            Browsers optimize
+            <ul>
+              <li class="fragment">Coarse-grained parrallelism</li>
+              <li class="fragment">Fine-grained parrallelism</li>
+              <li class="fragment">Web Assembly</li>
+            </ul>
+          </li>
+          <li class="fragment">Languages like Rust
+            <span class="fragment">or Go, Elixir, Elm...</span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a target="_blank" href="https://www.youtube.com/watch?v=xCBWS8G5Cm0">Lin Clark's JS-Kongress talk</a></li>
+          <li><a target="_blank" href="https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/">Inside a super fast CSS engine: Quantum CSS (aka Stylo)</a></li>
+          <li><a target="_blank" href="https://hacks.mozilla.org/2017/06/avoiding-race-conditions-in-sharedarraybuffers-with-atomics/#data-race">Avoiding race conditions in SharedArrayBuffers with Atomics</a></li>
+          <li><a target="_blank" href="https://rustbyexample.com/">Rust by Example</a></li>
+          <li><a target="_blank" href="https://github.com/AttilaGal/presentations">these slides</a></li>
+        </ul>
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/search/search.js', async: true },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true }
+      ]
+    });
+
+  </script>
+
+</body>
+
 </html>
