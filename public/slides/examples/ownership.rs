@@ -18,3 +18,15 @@ fn main() {
 fn printer(text: String) {
     println!("{}", text);
 }
+
+
+fn main() {
+    let text = String::from("hello");
+    
+    let text2 = &mut text;
+    text2.push_str(", world");
+    
+
+    println!("{}", text);
+    println!("{}", text2);
+}
